@@ -5,7 +5,7 @@ Addon for World of warcraft classic (client 1.4)
 Download the addon, remove "-main" sufix form the downloaded directory name and place it under Interface/AddOns/
 
 ### About
-Useful for raids where you want trash loot to be on group loot and only boss loot on master loot. Once the addo is enabled, it will automaticaly switch to master loot under these conditions:
+Useful for raids where you want trash loot to be on group loot and only boss loot on master loot. Once the addon is enabled, it will automaticaly switch to master loot under these conditions:
 1. you are in a raid group
 2. you are the raid leader
 3. loot type is not already set to master loot
