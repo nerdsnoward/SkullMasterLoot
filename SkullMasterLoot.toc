@@ -1,0 +1,8 @@
+## Interface: 11200
+## Title: SkullMasterLoot
+## Version: 1.0
+## Author: Snoward
+## Notes: Automatica switch to master loot for raid boss encounters
+
+# main
+SkullMasterLoot.lua
