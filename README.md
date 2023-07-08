@@ -1,5 +1,5 @@
 # 💰☠️ SkullMasterLoot ☠️💰
-Addon for World of warcraft classic (client 1.21) 
+Addon for World of warcraft classic (client 1.12) 
 
 ### Instructions
 Download the addon, remove "-main" sufix form the downloaded directory name and place it under Interface/AddOns/
