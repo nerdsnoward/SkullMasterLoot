@@ -1,14 +1,17 @@
 local EventFrame = CreateFrame("Frame")
 EventFrame:RegisterEvent("PLAYER_TARGET_CHANGED")
-EventFrame:SetScript("OnEvent", function(self, event, ...)
-    local IsFightingBoss = UnitLevel("target") < 0 or UnitLevel("targettarget") < 0
+EventFrame:SetScript("OnEvent", function()
+    inInstance, instanceType = IsInInstance()
 
-    if IsFightingBoss and GetLootMethod() ~= "master" and GetNumRaidMembers() > 0 and IsRaidLeader() then
-        local BossName = (UnitLevel("target") < 0 and UnitName("target")) or (UnitLevel("targettarget") < 0 and UnitName("targettarget"))
-
-        ChatFrame1:AddMessage('SkullMasterLoot detected a boss! Switching to master loot.')
-        SetLootMethod("master", UnitName("player"))
-        SendChatMessage(UnitName("player") .. " " .. "switched to master loot for" .. " " .. BossName,
-            "RAID_WARNING")
+    if inInstance and instanceType == 'raid' then
+        local isFightingBoss = UnitLevel("target") < 0 or UnitLevel("targettarget") < 0
+        local bossName = (UnitLevel("target") < 0 and UnitName("target")) or (UnitLevel("targettarget") < 0 and UnitName("targettarget"))
+    
+        if isFightingBoss and GetLootMethod() ~= "master" and IsRaidLeader() then
+            ChatFrame1:AddMessage('SkullMasterLoot detected a boss! Switching to master loot.')
+            SetLootMethod("master", UnitName("player"))
+            SendChatMessage(UnitName("player") .. " " .. "switched to master loot for" .. " " .. bossName,
+                "RAID_WARNING")
+        end 
     end
 end)
