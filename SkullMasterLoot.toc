@@ -1,6 +1,6 @@
 ## Interface: 11200
 ## Title: SkullMasterLoot
-## Version: 1.0
+## Version: 1.1
 ## Author: Snoward
 ## Notes: Automatically switch to master loot for raid boss encounters
 
